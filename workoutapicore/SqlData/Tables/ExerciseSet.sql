@@ -1,4 +1,4 @@
-CREATE TABLE [dbo].[ExerciseSet]
+CREATE TABLE db.ExerciseSet
 (
 	[Id] INT NOT NULL PRIMARY KEY,
 	[AuthUserId] nvarchar(128) NOT NULL,

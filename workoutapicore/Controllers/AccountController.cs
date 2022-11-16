@@ -9,6 +9,7 @@ using System.IdentityModel.Tokens.Jwt;
 using workoutapicore.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
+using APIDATAManagerCore.Code;
 
 namespace workoutapicore.Controllers
 {
@@ -33,6 +34,33 @@ namespace workoutapicore.Controllers
         }
 
         //add create account endpt
+        [AllowAnonymous]
+        [Route("CreateAccount")]
+        [HttpPost]
+        public IActionResult CreateAccount(Login login)
+        {
+            IActionResult response = Unauthorized();
+            using (IDbConnection connection = new MySqlConnection(Environment.GetEnvironmentVariable("Connection")))
+            {
+                try
+                {
+                    // abstract this out with method and make stored procedure
+                    // update sql to not send some of this data
+                    connection.Execute(@$"insert into db.user (Id, AuthUserId, Username, Password, 
+                    Firstname, Lastname, Email, Bio, Twitter, Instagram, Facebook, Youtube) 
+                    values(3, '3', '{login.username.Replace("'", "")}', '{Hasher.Hash(login.password.Replace("'", ""))}',
+                    'kimel', 'password', 'email', 'bio', 
+                    'twitter', 'instagram', 'facebook', 'youtube')");
+                }
+                catch (Exception ex)
+                {
+                    return response;
+                }
+            }
+            response = Ok();
+
+            return response;
+        }
 
         [AllowAnonymous]
         [Route("Login")]
@@ -43,12 +71,11 @@ namespace workoutapicore.Controllers
             UserModel output = new UserModel();
             using (IDbConnection connection = new MySqlConnection(Environment.GetEnvironmentVariable("Connection")))
             {
+                string pass = Hasher.Hash(login.password.Replace("'", ""));
                 try
                 {
                     // abstract this out with method and make stored procedure
-                    // use hasher for password
-                    output = connection.Query<UserModel>($"SELECT * FROM `User` WHERE Username = '{login.username.Replace("'", "")}'" +
-                        $"AND Password = '{login.password.Replace("'", "")}'").First();
+                    output = connection.Query<UserModel>($"SELECT * FROM `User` WHERE Username = '{login.username.Replace("'", "")}'").First();
                 }
                 catch (Exception ex)
                 {
@@ -56,7 +83,7 @@ namespace workoutapicore.Controllers
                 }
             }
 
-            if (output.AuthId != null)
+            if (output.AuthId != null && Hasher.Verify(login.password, output.Password))
             {
                 var tokenString = GenerateJSONWebToken(output);
                 response = Ok(new { token = tokenString });
@@ -65,8 +92,8 @@ namespace workoutapicore.Controllers
             return response;
         }
 
-            private string GenerateJSONWebToken(UserModel userInfo)
-            {
+        private string GenerateJSONWebToken(UserModel userInfo)
+        {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
