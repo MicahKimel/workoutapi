@@ -1,16 +1,21 @@
-CREATE TABLE [dbo].[User]
+CREATE TABLE db.User
 (
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
-	[AuthUserId] nvarchar(128) NOT NULL,
-	[Username] nvarchar(128) NOT NULL,
-	[Firstname] nvarchar(50) NOT NULL,
-	[Lastname] nvarchar(50) NOT NULL,
-	[Email] nvarchar(256) NOT NULL,
-	[Bio] nvarchar(MAX),
-	[Twitter] nvarchar(MAX),
-	[Instagram] nvarchar(MAX),
-	[Facebook] nvarchar(MAX),
-	[Youtube] nvarchar(MAX),
-	[UpdateTime] datetime2 NOT NULL DEFAULT getutcdate(),
-	[CreateTime] datetime2 NOT NULL DEFAULT getutcdate()
+	Id INT NOT NULL PRIMARY KEY,
+	AuthUserId nvarchar(128) NOT NULL,
+	Username nvarchar(128) NOT NULL,
+	Password nvarchar(128) NOT NULL,
+	Firstname nvarchar(50) NOT NULL,
+	Lastname nvarchar(50) NOT NULL,
+	Email nvarchar(256) NOT NULL,
+	Bio nvarchar(256),
+	Twitter nvarchar(256),
+	Instagram nvarchar(256),
+	Facebook nvarchar(256),
+	Youtube nvarchar(256),
+	UpdateTime datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	CreateTime datetime NOT NULL  DEFAULT CURRENT_TIMESTAMP
 )
+
+
+insert into db.user (Id, AuthUserId, Username, Password, Firstname, Lastname, Email, Bio, Twitter, Instagram, Facebook, Youtube) 
+values (1, '1', 'micah', 'micah', 'kimel', 'password', 'email', 'bio', 'twitter', 'instagram', 'facebook', 'youtube');
