@@ -32,6 +32,8 @@ namespace workoutapicore.Controllers
             }
         }
 
+        //add create account endpt
+
         [AllowAnonymous]
         [Route("Login")]
         [HttpPost]
@@ -43,6 +45,8 @@ namespace workoutapicore.Controllers
             {
                 try
                 {
+                    // abstract this out with method and make stored procedure
+                    // use hasher for password
                     output = connection.Query<UserModel>($"SELECT * FROM `User` WHERE Username = '{login.username.Replace("'", "")}'" +
                         $"AND Password = '{login.password.Replace("'", "")}'").First();
                 }
