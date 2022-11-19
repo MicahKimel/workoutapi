@@ -23,16 +23,6 @@ namespace workoutapicore.Controllers
             _config = config;
         }
 
-        [HttpGet("getUsers")]
-        [EnableCors]
-        public async Task<List<object>> getUsers() {
-            using (IDbConnection connection = new MySqlConnection(Environment.GetEnvironmentVariable("Connection")))
-            {
-                var output = connection.Query("SELECT * FROM `User` LIMIT 1").ToList();
-                return output;
-            }
-        }
-
         //add create account endpt
         [AllowAnonymous]
         [Route("CreateAccount")]
