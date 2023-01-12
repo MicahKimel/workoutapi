@@ -14,8 +14,8 @@ CREATE TABLE db.User
 	Youtube nvarchar(256),
 	UpdateTime datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	CreateTime datetime NOT NULL  DEFAULT CURRENT_TIMESTAMP
-)
+);
 
 
-insert into db.user (Id, AuthUserId, Username, Password, Firstname, Lastname, Email, Bio, Twitter, Instagram, Facebook, Youtube) 
+insert into db.User (Id, AuthUserId, Username, Password, Firstname, Lastname, Email, Bio, Twitter, Instagram, Facebook, Youtube) 
 values (1, '1', 'micah', 'micah', 'kimel', 'password', 'email', 'bio', 'twitter', 'instagram', 'facebook', 'youtube');

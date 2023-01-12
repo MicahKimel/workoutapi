@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Rg1H5BNB+6V6mWmVo0KKR7UaB4u08BkRSkQprTLcFhM=",
+  "Source": "workoutapicore",
+  "BasePath": "_content/workoutapicore",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,32 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kimel\\OneDrive\\Desktop\\workoutapicore\\workoutapicore\\workoutapicore.csproj": {}
+    "/Users/micahkimel/Documents/Projects/workoutapi/workoutapicore/workoutapicore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kimel\\OneDrive\\Desktop\\workoutapicore\\workoutapicore\\workoutapicore.csproj": {
+    "/Users/micahkimel/Documents/Projects/workoutapi/workoutapicore/workoutapicore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kimel\\OneDrive\\Desktop\\workoutapicore\\workoutapicore\\workoutapicore.csproj",
+        "projectUniqueName": "/Users/micahkimel/Documents/Projects/workoutapi/workoutapicore/workoutapicore.csproj",
         "projectName": "workoutapicore",
-        "projectPath": "C:\\Users\\kimel\\OneDrive\\Desktop\\workoutapicore\\workoutapicore\\workoutapicore.csproj",
-        "packagesPath": "C:\\Users\\kimel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kimel\\OneDrive\\Desktop\\workoutapicore\\workoutapicore\\obj\\",
+        "projectPath": "/Users/micahkimel/Documents/Projects/workoutapi/workoutapicore/workoutapicore.csproj",
+        "packagesPath": "/Users/micahkimel/.nuget/packages/",
+        "outputPath": "/Users/micahkimel/Documents/Projects/workoutapi/workoutapicore/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kimel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/micahkimel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -37,8 +35,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Dapper": {
               "target": "Package",
@@ -46,19 +44,19 @@
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[3.1.31, )"
+              "version": "[7.0.2, )"
             },
             "Microsoft.IdentityModel.JsonWebTokens": {
               "target": "Package",
-              "version": "[6.25.0, )"
+              "version": "[6.25.1, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
-              "version": "[6.25.0, )"
+              "version": "[6.25.1, )"
             },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
-              "version": "[1.15.1, )"
+              "version": "[1.17.0, )"
             },
             "MySql.Data": {
               "target": "Package",
@@ -66,7 +64,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.5.0, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
@@ -74,7 +72,7 @@
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.25.0, )"
+              "version": "[6.25.1, )"
             }
           },
           "imports": [
@@ -83,7 +81,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -95,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
         }
       }
     }

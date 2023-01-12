@@ -30,13 +30,14 @@ namespace workoutapicore.Controllers
         public IActionResult CreateAccount(Login login)
         {
             IActionResult response = Unauthorized();
-            using (IDbConnection connection = new MySqlConnection(Environment.GetEnvironmentVariable("Connection")))
+            // SET UP A REAL PASSWORD AND MAKE ENV
+            using (IDbConnection connection = new MySqlConnection("server=127.0.0.1;uid=root;pwd=password;database=db"))
             {
                 try
                 {
                     // abstract this out with method and make stored procedure
                     // update sql to not send some of this data
-                    connection.Execute(@$"insert into db.user (Id, AuthUserId, Username, Password, 
+                    connection.Execute(@$"insert into db.User (Id, AuthUserId, Username, Password, 
                     Firstname, Lastname, Email, Bio, Twitter, Instagram, Facebook, Youtube) 
                     values(3, '3', '{login.username.Replace("'", "")}', '{Hasher.Hash(login.password.Replace("'", ""))}',
                     'kimel', 'password', 'email', 'bio', 
@@ -59,7 +60,7 @@ namespace workoutapicore.Controllers
         {
             IActionResult response = Unauthorized();
             UserModel output = new UserModel();
-            using (IDbConnection connection = new MySqlConnection(Environment.GetEnvironmentVariable("Connection")))
+            using (IDbConnection connection = new MySqlConnection("server=127.0.0.1;uid=root;pwd=password;database=db"))
             {
                 string pass = Hasher.Hash(login.password.Replace("'", ""));
                 try
