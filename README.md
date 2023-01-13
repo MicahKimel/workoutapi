@@ -1,6 +1,8 @@
 # workoutapi
 
-* ToDo:
+An Api for the ReactNative Project
+
+# ToDo:
 
 - abstract sql calling methods
 - learn how to get env off linux/mac
