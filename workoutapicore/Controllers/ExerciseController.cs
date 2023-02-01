@@ -46,7 +46,7 @@ namespace workoutapicore.Controllers
             }
         }
 
-        [HttpGet("getExerciseSet")]
+        [HttpGet("getExerciseSetByWorkout")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [EnableCors]
         public async Task<List<object>> getExerciseSetByWorkout(int workoutId)
@@ -58,7 +58,7 @@ namespace workoutapicore.Controllers
             }
         }
 
-        [HttpGet("getExerciseSet")]
+        [HttpGet("getExerciseSetByExercise")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [EnableCors]
         public async Task<List<object>> getExerciseSetByExercise(int ExerciseId)
