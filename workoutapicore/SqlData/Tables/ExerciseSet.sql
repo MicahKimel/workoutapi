@@ -1,3 +1,5 @@
+
+USE db;
 CREATE TABLE db.ExerciseSet
 (
 	Id INT NOT NULL PRIMARY KEY,
@@ -6,8 +8,8 @@ CREATE TABLE db.ExerciseSet
 	ExerciseId INT NOT NULL,
 	Sets INT NOT NULL,
 	Reps INT NOT NULL,
-	Time datetime2,
+	Time datetime,
 	MetricType bit,
-	UpdateTime datetime2 NOT NULL DEFAULT getutcdate(),
-	CreateTime datetime2 NOT NULL DEFAULT getutcdate()
-)
+	UpdateTime datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	CreateTime datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

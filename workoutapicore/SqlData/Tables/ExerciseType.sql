@@ -1,8 +1,10 @@
+
+USE db;
 CREATE TABLE db.ExerciseType
 (
 	Id INT NOT NULL PRIMARY KEY,
 	Name nvarchar(256) NOT NULL,
 	Image BLOB,
-	UpdateTime datetime2 NOT NULL DEFAULT getutcdate(),
-	CreateTime datetime2 NOT NULL DEFAULT getutcdate()
-)
+	UpdateTime datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	CreateTime datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
