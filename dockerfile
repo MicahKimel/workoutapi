@@ -4,5 +4,5 @@ ENV MYSQL_ROOT_PASSWORD=$DockerPass
 
 COPY ./workoutapicore/SqlData/Tables/User.sql /docker-entrypoint-initdb.d/ \
      ./workoutapicore/SqlData/Tables/ExerciseType.sql /docker-entrypoint-initdb.d/ \
-     ./workoutapicore/SqlData/Tables/ExerciseSet.sql /docker-entrypoint-initdb.d/
+     ./workoutapicore/SqlData/Tables/ExerciseSet.sql /docker-entrypoint-initdb.d/ .
 
