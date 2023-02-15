@@ -6,6 +6,10 @@ run with
 
 `dotnet run --project workoutapicore.csproj`
 
+Swagger url
+
+`http://localhost:5036/swagger/index.html`
+
 list docker images
 
 `docker images`
@@ -41,15 +45,13 @@ force recreate docker compose
 
 # ToDo:
 
-- abstract sql calling methods
+- write stored procedures for all endpts instead of inline sql
 - learn how to get env off linux/mac
-- add docker mysql into project
+- start docker on project launch
 - create workout set post
 - Get workoutsets for a day
-- Get workoutsets over a year
-- Get workoutsets for a type
-- Get workoutsets for a type & rep count
-- Get workoutsets for a type & weight
+- Get workoutsets over yearToDate
+- Filter by type, rep count, weight
 
 - Build refresh token endpt
 
