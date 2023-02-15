@@ -11,6 +11,7 @@ namespace workoutapicore.Controllers
 {
     [ApiController]
     [Route("work")]
+    [EnableCors]
     [Authorize]
     public class ExerciseController : Controller
     {

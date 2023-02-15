@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  database:
+    image: mysql_db
+    volumes:
+       - "./workoutapicore/SqlData/Tables/:/docker-entrypoint-initdb.d"
+    environment:
+      MYSQL_DATABASE: db
+    ports:
+      - '3306:3306'

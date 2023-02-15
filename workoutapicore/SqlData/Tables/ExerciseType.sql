@@ -1,4 +1,4 @@
-
+CREATE DATABASE IF NOT EXISTS db;
 USE db;
 CREATE TABLE db.ExerciseType
 (

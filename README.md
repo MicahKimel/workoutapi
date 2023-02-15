@@ -35,6 +35,10 @@ login
 
 `mysql -proot`
 
+force recreate docker compose
+
+`docker-compose up -d --force-recreate`
+
 # ToDo:
 
 - abstract sql calling methods

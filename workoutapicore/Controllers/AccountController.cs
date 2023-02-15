@@ -15,6 +15,7 @@ namespace workoutapicore.Controllers
 {
     [ApiController]
     [Route("api")]
+    [EnableCors]
     public class AccountController : ControllerBase
     {
         private IConfiguration _config;
@@ -31,6 +32,8 @@ namespace workoutapicore.Controllers
         {
             IActionResult response = Unauthorized();
             // SET UP A REAL PASSWORD AND MAKE ENV
+            string getEnv = Environment.GetEnvironmentVariable("envVar");
+            System.Console.WriteLine(getEnv);
             using (IDbConnection connection = new MySqlConnection("server=127.0.0.1;uid=root;pwd=password;database=db"))
             {
                 try
@@ -60,6 +63,8 @@ namespace workoutapicore.Controllers
         {
             IActionResult response = Unauthorized();
             UserModel output = new UserModel();
+            string getEnv = Environment.GetEnvironmentVariable("envVar");
+            System.Console.WriteLine(getEnv);
             using (IDbConnection connection = new MySqlConnection("server=127.0.0.1;uid=root;pwd=password;database=db"))
             {
                 string pass = Hasher.Hash(login.password.Replace("'", ""));
