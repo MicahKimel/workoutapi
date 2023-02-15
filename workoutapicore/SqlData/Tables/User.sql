@@ -21,27 +21,4 @@ CREATE TABLE db.User
 
 
 insert into db.User (Id, AuthUserId, Username, Password, Firstname, Lastname, Email, Bio, Twitter, Instagram, Facebook, Youtube) 
-values (1, '1', 'micah', 'micah', 'kimel', 'password', 'email', 'bio', 'twitter', 'instagram', 'facebook', 'youtube');
-
--- CREATE TABLE db.ExerciseType
--- (
--- 	Id INT NOT NULL PRIMARY KEY,
--- 	Name nvarchar(256) NOT NULL,
--- 	Image BLOB,
--- 	UpdateTime datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
--- 	CreateTime datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
--- );
-
--- CREATE TABLE db.ExerciseSet
--- (
--- 	Id INT NOT NULL PRIMARY KEY,
--- 	AuthUserId nvarchar(128) NOT NULL,
--- 	WorkoutId INT NOT NULL,
--- 	ExerciseId INT NOT NULL,
--- 	Sets INT NOT NULL,
--- 	Reps INT NOT NULL,
--- 	Time datetime,
--- 	MetricType bit,
--- 	UpdateTime datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
--- 	CreateTime datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
--- );
+values (1, '1', 'micah', 'string', 'string', 'string', 'email', 'bio', 'twitter', 'instagram', 'facebook', 'youtube');

@@ -45,13 +45,13 @@ force recreate docker compose
 
 # ToDo:
 
+- learn how to keep database data on docker regenerate?
 - write stored procedures for all endpts instead of inline sql
-- learn how to get env off linux/mac
 - start docker on project launch
-- create workout set post
-- Get workoutsets for a day
-- Get workoutsets over yearToDate
-- Filter by type, rep count, weight
+- learn how to get env off linux/mac
+
+- Create endpt for exercise set for a day or yearToDate
+    - optional filter by type, rep count, weight
 
 - Build refresh token endpt
 
