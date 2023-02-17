@@ -3,7 +3,7 @@ USE db;
 
 CREATE TABLE db.User
 (
-	Id INT NOT NULL PRIMARY KEY,
+	Id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	AuthUserId nvarchar(128) NOT NULL,
 	Username nvarchar(128) NOT NULL,
 	Password nvarchar(128) NOT NULL,
