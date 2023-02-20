@@ -28,6 +28,7 @@ CREATE TABLE db.ExerciseType
 (
 	ExerciseId INT NOT NULL PRIMARY KEY,
 	Name nvarchar(256) NOT NULL,
+	Categegory INT NOT NULL,
 	Image BLOB,
 	UpdateTime datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	CreateTime datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
