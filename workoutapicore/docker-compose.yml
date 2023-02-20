@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  database:
+    image: mysql_db
+    volumes:
+       - "./SqlData/Tables/:/docker-entrypoint-initdb.d"
+       - "test-volume:/var/lib/mysql"
+    ports:
+      - '3306:3306'
+volumes:
+  test-volume:
