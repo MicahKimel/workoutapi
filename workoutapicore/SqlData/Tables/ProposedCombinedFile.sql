@@ -22,6 +22,15 @@ CREATE TABLE db.User
 	CreateTime datetime NOT NULL  DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Create Category Table
+CREATE TABLE db.Category
+(
+	Id INT NOT NULL PRIMARY KEY,
+	Name nvarchar(256) NOT NULL
+
+	CONSTRAINTS PK_Category PRIMARY KEY (Id)
+)
+
 
 --Create ExerciseType TABLE
 CREATE TABLE db.ExerciseType
@@ -29,10 +38,12 @@ CREATE TABLE db.ExerciseType
 	ExerciseId INT NOT NULL PRIMARY KEY,
 	Name nvarchar(256) NOT NULL,
 	Image BLOB,
+	CategoryId INT NOT NULL,
 	UpdateTime datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	CreateTime datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 
 	CONSTRAINT PK_ExerciseType PRIMARY KEY (ExerciseId)
+	CONSTRAINT FK1_ExerciseType FOREIGN KEY (CategoryId) REFERENCES db.Category(Id)
 );
 
 
