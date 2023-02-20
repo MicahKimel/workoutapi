@@ -19,6 +19,10 @@ list docker containers
 `docker container ls`
 `docker ps`
 
+create docker volume for data to persist
+
+`docker volume create test-volume`
+
 build docker image from dockerfile
 
 `docker build -t mysql_db .`
@@ -43,16 +47,3 @@ force recreate docker compose
 
 `docker-compose up -d --force-recreate`
 
-# ToDo:
-
-- learn how to keep database data on docker regenerate?
-- write stored procedures for all endpts instead of inline sql
-- start docker on project launch
-- learn how to get env off linux/mac
-
-- Create endpt for exercise set for a day or yearToDate
-    - optional filter by type, rep count, weight
-
-- Build refresh token endpt
-
-- Think about rolling out on linode

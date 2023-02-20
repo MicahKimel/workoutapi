@@ -1,20 +1,29 @@
 ﻿<Properties StartupConfiguration="{6B4CA195-2C87-4E4E-A915-2A0FFFB71740}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.ItemProperties.workoutapicore PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="workoutapicore/Program.cs">
+    <Files>
+      <File FileName="workoutapicore/Program.cs" Line="17" Column="14" />
+      <File FileName="workoutapicore/Startup.cs" Line="56" Column="40" />
+      <File FileName="workoutapicore/appsettings.json" Line="10" Column="6" />
+      <File FileName="workoutapicore/appsettings.Development.json" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="workoutapicore" expanded="True">
-            <Node name="workoutapicore" expanded="True" selected="True" />
+            <Node name="workoutapicore" expanded="True">
+              <Node name="appsettings.json" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.workoutapicore PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
 </Properties>
