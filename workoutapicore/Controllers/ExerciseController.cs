@@ -47,6 +47,18 @@ namespace workoutapicore.Controllers
             }
         }
 
+        [HttpGet("getExercises")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [EnableCors]
+        public async Task<List<object>> getExercises()
+        {
+            using (IDbConnection connection = new MySqlConnection("server=127.0.0.1;uid=root;pwd=password;database=db"))
+            {
+                var output = connection.Query(@$"Select * FROM db.ExerciseType").ToList();
+                return output;
+            }
+        }
+
         [HttpGet("getExerciseSetByWorkout")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [EnableCors]
