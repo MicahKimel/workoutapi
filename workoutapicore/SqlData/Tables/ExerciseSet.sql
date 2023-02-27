@@ -10,11 +10,12 @@ CREATE TABLE db.Category
 CREATE TABLE db.ExerciseSet
 (
 	Id INT NOT NULL PRIMARY KEY,
-	AuthUserId nvarchar(128) NOT NULL,
+	UserId INT NOT NULL,
 	WorkoutId INT NOT NULL,
 	ExerciseId INT NOT NULL,
 	Sets INT NOT NULL,
 	Reps INT NOT NULL,
+	Weight Decimal(5,2),
 	Time datetime,
 	MetricType bit,
 	UpdateTime datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,

@@ -95,6 +95,8 @@ namespace workoutapicore.Controllers
 
             var claims = new[] {
                 new Claim(JwtRegisteredClaimNames.Sub, userInfo.Username),
+                new Claim("AuthId", userInfo.AuthId.ToString()),
+                new Claim("Id", userInfo.Id.ToString()),
                 new Claim(JwtRegisteredClaimNames.Email, userInfo.Email),
                 new Claim("DateOfJoing", userInfo.CreateTime.ToString("yyyy-MM-dd")),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
