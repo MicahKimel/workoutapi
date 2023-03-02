@@ -90,8 +90,11 @@ namespace workoutapicore.Controllers
                 if (CreateTime != null){
                     WhereClause += @$" AND DATE_FORMAT(CreateTime,  '%Y-%m-%d') = {CreateTime.Replace("'", "")} ";
                 }
-                var output = connection.Query(@$"Select ExerciseId, Reps, Weight, MetricType, CreateTime, 
-                DATE_FORMAT(CreateTime,  '%Y%m%d') as Date, DATE_FORMAT(CreateTime,  '%Y') as Year FROM db.ExerciseSet where AuthUserId = {Id} " + WhereClause).ToList();
+                var output = connection.Query(@$"Select et.Name, es.Reps, es.Weight, es.MetricType, es.CreateTime, 
+                DATE_FORMAT(es.CreateTime,  '%Y%m%d') as Date, DATE_FORMAT(es.CreateTime,  '%Y')
+                as Year FROM db.ExerciseSet es
+                LEFT JOIN db.ExerciseType et on et.Id = es.ExerciseId
+                where AuthUserId = {Id} " + WhereClause).ToList();
                 return output;
             }
         }
