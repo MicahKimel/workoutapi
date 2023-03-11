@@ -2429,11 +2429,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/micahkimel/Documents/Projects/workoutapi/workoutapicore/workoutapicore.csproj",
+      "projectUniqueName": "/Users/micahkimel/Desktop/workoutapi/workoutapicore/workoutapicore.csproj",
       "projectName": "workoutapicore",
-      "projectPath": "/Users/micahkimel/Documents/Projects/workoutapi/workoutapicore/workoutapicore.csproj",
+      "projectPath": "/Users/micahkimel/Desktop/workoutapi/workoutapicore/workoutapicore.csproj",
       "packagesPath": "/Users/micahkimel/.nuget/packages/",
-      "outputPath": "/Users/micahkimel/Documents/Projects/workoutapi/workoutapicore/obj/",
+      "outputPath": "/Users/micahkimel/Desktop/workoutapi/workoutapicore/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/micahkimel/.nuget/NuGet/NuGet.Config"
@@ -2516,7 +2516,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.103/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/7.0.100/libexec/sdk/7.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }

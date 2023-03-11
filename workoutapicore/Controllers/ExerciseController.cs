@@ -47,7 +47,7 @@ namespace workoutapicore.Controllers
             string AuthId = User.FindFirstValue("AuthId");
             using (IDbConnection connection = new MySqlConnection("server=127.0.0.1;uid=root;pwd=password;database=db"))
             {
-                var output = connection.Query(@$"insert into db.ExerciseSet (AuthUserId, WorkoutId, ExerciseId, Weight,
+                var output = connection.Query(@$"insert into db.ExerciseSet (UserId, WorkoutId, ExerciseId, Weight,
                     Reps, MetricType) values ({Id}, {1},
                     {workout.ExerciseId}, {workout.Weight}, {workout.Reps}, {workout.MetricType})").ToList();
                 return output;
