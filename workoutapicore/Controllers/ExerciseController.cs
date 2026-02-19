@@ -94,7 +94,7 @@ namespace workoutapicore.Controllers
                 DATE_FORMAT(es.CreateTime,  '%Y%m%d') as Date, DATE_FORMAT(es.CreateTime,  '%Y')
                 as Year FROM db.ExerciseSet es
                 LEFT JOIN db.ExerciseType et on et.Id = es.ExerciseId
-                where AuthUserId = {Id} " + WhereClause).ToList();
+                where UserId = {Id} " + WhereClause).ToList();
                 return output;
             }
         }
